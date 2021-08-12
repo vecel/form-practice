@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form id="register">
+            <label for="username">Username<span></span></label>
+            <input id="username" type="text" maxlength="30" oninput="checkInputValidity(this)" required>
+            <span class="constraints">Enter the username</span>
+            <label for="email">Email</label>
+            <input id="email" type="email" oninput="checkInputValidity(this)" required>
+            <span class="constraints">Email adress is required</span>
+            <label for="password">Password</label>
+            <input id="password" type="password" minlength="8" oninput="checkInputValidity(this)" required>
+            <span class="constraints">Password must be at least 8 character long, contains at least 1 number and capital letter</span>
+            <label for="confirm-password">Confirm password</label>
+            <input id="confirm-password" type="password" oninput="checkInputValidity(this)" required>
+            <label for="city">City</label>
+            <input id="city">
+            <input id="submit" type="submit" value="Register" onsubmit="submitForm()">
+        </form>
+    </body>
+
+    <script src="script.js"></script>
+
+</html>
